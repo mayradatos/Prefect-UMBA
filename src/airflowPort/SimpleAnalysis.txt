@@ -1,0 +1,88 @@
+
+ Searching for Missings,type of data and also known the shape of data 
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 1000 entries, 67 to 27
+Data columns (total 10 columns):
+ #   Column            Non-Null Count  Dtype 
+---  ------            --------------  ----- 
+ 0   Sex               1000 non-null   object
+ 1   Job               1000 non-null   int64 
+ 2   Housing           1000 non-null   object
+ 3   Saving accounts   817 non-null    object
+ 4   Checking account  606 non-null    object
+ 5   Credit amount     1000 non-null   int64 
+ 6   Duration          1000 non-null   int64 
+ 7   Purpose           1000 non-null   object
+ 8   Risk              1000 non-null   object
+ 9   Age_cat           1000 non-null   object
+dtypes: int64(3), object(7)
+memory usage: 85.9+ KB
+
+
+ Looking unique values 
+Sex                   2
+Job                   4
+Housing               3
+Saving accounts       4
+Checking account      3
+Credit amount       921
+Duration             33
+Purpose               8
+Risk                  2
+Age_cat               4
+
+ Purpose 
+['radio/TV' 'education' 'furniture/equipment' 'car' 'business'
+ 'domestic appliances' 'repairs' 'vacation/others']
+ Sex 
+['male' 'female']
+ Housing 
+['own' 'free' 'rent']
+ Saving accounts 
+[nan 'little' 'quite rich' 'rich' 'moderate']
+ Risk 
+['good' 'bad']
+ Checking account 
+['little' 'moderate' nan 'rich']
+ Aget_cat 
+[Student,Young,Adult,Senior]
+ Looking the data 
+Age                     67        22         49                   45      53
+Sex                   male    female       male                 male    male
+Job                      2         2          1                    2       2
+Housing                own       own        own                 free    free
+Saving accounts        NaN    little     little               little  little
+Checking account    little  moderate        NaN               little  little
+Credit amount         1169      5951       2096                 7882    4870
+Duration                 6        48         12                   42      24
+Purpose           radio/TV  radio/TV  education  furniture/equipment     car
+Risk                  good       bad       good                 good     bad
+Age_cat             Senior   Student      Adult                Adult   Adult
+ 
+ 
+ Crosstab session and anothers to explore our data by another metrics a little deep 
+
+ Crosstab to define the type of job a person have depending on his sex 
+Job      0    1    2    3
+Sex                      
+female  12   64  197   37
+male    10  136  433  111
+
+ Crosstab to define the checking account a person have depending on his sex 
+Sex               female  male
+Checking account              
+little                88   186
+moderate              86   183
+rich                  20    43
+
+ Crosstab to define the purpose a person have depending on his sex 
+Sex                  female  male
+Purpose                          
+business                 19    78
+car                      94   243
+domestic appliances       6     6
+education                24    35
+furniture/equipment      74   107
+radio/TV                 85   195
+repairs                   5    17
+vacation/others           3     9
